@@ -1,0 +1,301 @@
+.AboutUsPage {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  &__header {
+    background: linear-gradient(
+        to top,
+        rgba(0, 0, 0, 0.73),
+        rgba(0, 0, 0, 0.699)
+      ),
+      url("https://i.pinimg.com/736x/ca/92/63/ca92637eb9911281cc2add2aa22fb945.jpg")
+        no-repeat center center/cover;
+    color: #fff;
+    text-align: center;
+    padding: 100px 20px;
+
+    h1 {
+      font-size: 48px;
+      margin-bottom: 20px;
+    }
+  }
+
+  &__content {
+    position: relative;
+    padding: 5rem 5rem 3rem 3rem;
+    overflow: hidden;
+    min-height: 450px;
+    &-text {
+      max-width: 70%;
+      h2 {
+        font-size: 3rem;
+        color: var(--blackColor);
+        margin: 0 0 20px 0;
+      }
+      p {
+        color: var(--text-color);
+        margin-bottom: 20px;
+        font-size: 14px;
+      }
+    }
+    &-circle {
+      position: absolute;
+      right: -180px;
+      transform: translateY(-40%);
+      width: 500px;
+      height: 500px;
+      border: 2px dashed #ccc;
+      border-radius: 50%;
+      .loader {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .iconLoaderProgress {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        animation-duration: 2s;
+        animation-timing-function: linear;
+        animation-iteration-count: infinite;
+        animation-name: rotateLoader;
+      }
+
+      .iconLoaderProgress svg {
+        stroke-width: 16px;
+        fill: none;
+        transform-origin: center;
+        z-index: 999;
+      }
+
+      .iconLoaderProgressFirst circle,
+      .iconLoaderProgressSecond circle,
+      .iconLoaderProgressFirst,
+      .iconLoaderProgressSecond {
+        animation-timing-function: ease-in-out;
+        animation-iteration-count: infinite;
+      }
+
+      .iconLoaderProgressFirst circle,
+      .iconLoaderProgressSecond circle {
+        animation-duration: 50s;
+        border-radius: 15px;
+      }
+
+      .iconLoaderProgressFirst,
+      .iconLoaderProgressSecond {
+        animation-duration: 100s;
+        position: absolute;
+      }
+
+      .iconLoaderProgressFirst circle {
+        animation-name: circleFirst;
+        stroke-dasharray: 628, 628;
+        stroke-dashoffset: 0;
+        stroke: var(--PrimaryColor);
+        stroke-linecap: round;
+      }
+
+      .iconLoaderProgressSecond {
+        transform: rotate(-14deg);
+      }
+
+      .iconLoaderProgressSecond circle {
+        animation-name: circleSecond;
+        stroke-dasharray: 628, 628;
+        stroke-dashoffset: 0;
+        stroke: var(--HoverColor);
+        stroke-linecap: round;
+      }
+      .loader-image {
+        position: absolute;
+        width: 330px;
+        height: 330px;
+        border-radius: 50%;
+        z-index: 500;
+        transform: none;
+        animation: none;
+      }
+
+      @keyframes circleFirst {
+        from,
+        to {
+          stroke-dashoffset: 50;
+        }
+
+        50% {
+          stroke-dashoffset: 625;
+        }
+      }
+
+      @keyframes circleSecond {
+        from,
+        to {
+          stroke-dashoffset: -625;
+        }
+
+        50% {
+          stroke-dashoffset: -50;
+        }
+      }
+
+      @keyframes rotateLoader {
+        from {
+          transform: rotate(0deg);
+        }
+
+        to {
+          transform: rotate(360deg);
+        }
+      }
+    }
+  }
+
+  &__video {
+    align-items: center;
+    gap: 1rem;
+    padding: 2rem 5rem 0 3rem;
+    background: linear-gradient(
+        to top,
+        rgba(0, 0, 0, 0.414),
+        rgba(0, 0, 0, 0.699)
+      ),
+      url("https://i.pinimg.com/736x/e9/64/df/e964dfb3f6773f9b6b3679828b3336a5.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    .AboutUsPage__videoCard {
+      gap: 2rem;
+      padding: 2rem 1rem;
+
+      .AboutUsPage__cardText {
+        width: 60%;
+        h2 {
+          color: var(--WhiteColor);
+          font-weight: 600;
+          padding-bottom: 1rem;
+        }
+
+        p {
+          color: var(--WhiteColor);
+          opacity: 0.7;
+          font-size: 12px;
+          font-weight: 400;
+          letter-spacing: 1px;
+        }
+      }
+    }
+    .AboutUsPage__cardVideo {
+      border: 2px solid var(--WhiteColor);
+      height: 200px;
+      width: 100%;
+      border-radius: 10px;
+      overflow: hidden;
+
+      video {
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+      }
+    }
+  }
+
+  &__container {
+    align-items: center;
+    justify-content: center;
+    padding: 50px;
+    text-align: center;
+
+    &-title {
+      font-size: 36px;
+      font-weight: bold;
+      color: var(--blackColor);
+      margin: 0;
+      margin-bottom: 10px;
+    }
+  }
+}
+.AboutUsPageSwiper {
+  width: 70%;
+  height: 100%;
+  padding-bottom: 2rem;
+  .AboutUsPageSwiperSlide {
+    width: 80%;
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+    box-shadow: 0 2px 8px 2px rgba(178, 178, 178, 0.334);
+    border-radius: 1rem;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem 0.5rem;
+    display: flex;
+    flex-direction: column;
+    min-height: 500px;
+    img {
+      border-radius: 50%;
+      width: 150px;
+      height: 150px;
+      margin-bottom: 20px;
+    }
+    p {
+      width: 50%;
+      font-size: 12px;
+      color: var(--text-color);
+      margin: 0 0 20px;
+    }
+    .testimonial-name {
+      font-size: 14px;
+      font-weight: bold;
+      color: var(--blackColor);
+    }
+    .quote-icon {
+      font-size: 30px;
+      color: var(--PrimaryColor);
+      position: absolute;
+      top: 20px;
+      left: 40px;
+    }
+  }
+}
+@media (min-width: 640px) {
+  .AboutUsPage {
+    &__content {
+      &-circle {
+        transform: translateY(-20%);
+      }
+    }
+  }
+}
+@media (min-width: 768px) {
+}
+@media (min-width: 1024px) {
+  .AboutUsPage {
+    &__video {
+      .AboutUsPage__videoCard {
+        display: flex;
+      }
+    }
+  }
+  .AboutUsPageSwiper {
+    width: 50%;
+  }
+}
+
+@media (min-width: 1280px) {
+  .AboutUsPage {
+    &__content {
+      padding: 7rem 5rem 3rem 5rem;
+
+      &-circle {
+        transform: translateY(-45%);
+      }
+    }
+  }
+  .AboutUsPageSwiper {
+    width: 40%;
+  }
+}
+@media (min-width: 1536px) {
+}

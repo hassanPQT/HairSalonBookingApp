@@ -1,0 +1,279 @@
+:root {
+  --PrimaryColor: #1b5077;
+  --WhiteColor: hsl(0, 0%, 100%);
+  --textColor: hsl(240, 1%, 48%);
+  --HoverColor: #1b5077;
+  --blackColor: hsl(0, 0%, 18%);
+  --whiteColorDeam: hsl(0, 0%, 93%);
+  --greyBg: hsl(0, 0%, 96%);
+  --greyText: rgb(190, 190, 190);
+  --inputColor: hsl(330, 12%, 97%);
+}
+
+.swiper {
+  width: 100%;
+  height: 100%;
+}
+
+.slides {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  background: #788c9a;
+
+  &__content {
+    z-index: 888;
+    color: #fff;
+    width: 50%;
+    margin-left: 40px;
+    text-align: left;
+
+    h1 {
+      font-size: 1.5rem;
+      font-weight: 650;
+      line-height: 1.8rem;
+      text-transform: uppercase;
+      letter-spacing: 5px;
+      margin-bottom: 20px;
+
+      span {
+        color: var(--PrimaryColor);
+        font-size: 1rem;
+        font-weight: 550;
+      }
+    }
+
+    p {
+      opacity: 0.9;
+      font-size: 10px;
+      font-weight: 200;
+      padding: 1rem 0;
+      max-width: 85%;
+      margin-bottom: 20px;
+    }
+
+    a {
+      background: var(--PrimaryColor);
+      padding: 0.3rem 1rem;
+      color: var(--WhiteColor);
+      font-size: 0.9rem;
+      font-weight: 500;
+      text-decoration: none;
+      border-radius: 4rem;
+
+      &:hover {
+        background: #12344d;
+        color: var(--WhiteColor);
+      }
+    }
+  }
+
+  img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+.homeCard {
+  padding: 0.2rem 0.5rem;
+  margin-top: 10px;
+  display: flex;
+  z-index: 888;
+  width: 90%;
+  border-radius: 1rem;
+  background: var(--WhiteColor);
+  position: relative;
+  gap: 1rem;
+  justify-content: space-between;
+  bottom: 10%;
+  transform: translate(-50%);
+  left: 50%;
+  box-shadow: 0 2px 8px 4px rgba(178, 178, 178, 0.45);
+
+  &-booking {
+    label {
+      display: block;
+      color: var(--textColor);
+      font-weight: 500;
+      font-size: 13px;
+      padding-bottom: 0.4rem;
+    }
+
+    input {
+      width: 110%;
+      background: var(--inputColor);
+      border-radius: 10px;
+      border: none;
+      padding: 10px;
+      font-size: 13px;
+      font-weight: 500;
+
+      &::placeholder {
+        font-size: 13px;
+        opacity: 0.5;
+        font-weight: 400;
+      }
+
+      &:focus {
+        outline: none;
+      }
+    }
+  }
+
+  .slides__btn {
+    width: 40%;
+    padding: 0.6rem 1.5rem;
+    color: var(--WhiteColor);
+    font-weight: 600;
+  }
+}
+
+@media screen and (min-width: 480px) {
+  .slides {
+    &__content {
+      margin-left: 45px;
+
+      h1 {
+        font-size: 2rem;
+        margin-bottom: 0;
+        line-height: 2.2rem;
+
+        span {
+          font-size: 1rem;
+        }
+      }
+
+      a {
+        margin-top: 5px;
+        padding: 0.3rem 1rem;
+        font-size: 0.9rem;
+        font-weight: 500;
+        text-decoration: none;
+        border-radius: 4rem;
+      }
+    }
+  }
+
+  .homeCard {
+    &-booking {
+      input {
+        width: 130%;
+      }
+    }
+
+    .slides__btn {
+      width: 38%;
+      margin-bottom: 5px;
+      padding: 0.6rem 1.5rem;
+      color: var(--WhiteColor);
+      font-weight: 600;
+    }
+  }
+}
+
+@media screen and (min-width: 556px) {
+  .slides {
+    &__content {
+      width: 60%;
+      margin-left: 60px;
+
+      h1 {
+        font-size: 2.5rem;
+        line-height: 2.5rem;
+      }
+
+      p {
+        font-size: 13px;
+      }
+
+      a {
+        padding: 0.5rem 1rem;
+      }
+    }
+  }
+
+  .homeCard {
+    &-booking {
+      input {
+        width: 180%;
+      }
+    }
+
+    .slides__btn {
+      width: 30%;
+    }
+  }
+}
+
+@media screen and (min-width: 720px) {
+  .homeCard {
+    width: 70%;
+    left: 50%;
+
+    &-booking {
+      input {
+        width: 180%;
+      }
+
+      .slides__btn {
+        width: 40%;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .slides {
+    justify-content: center;
+
+    &__content {
+      width: 50%;
+      margin-left: 90px;
+      text-align: left;
+
+      h1 {
+        font-size: 3rem;
+        font-weight: 650;
+        line-height: 3rem;
+        margin-bottom: 20px;
+        span {
+          font-size: 1.5rem;
+          font-weight: 700;
+          line-height: 1rem;
+        }
+      }
+
+      p {
+        font-size: 18px;
+      }
+
+      a {
+        padding: 0.9rem 1.3rem;
+      }
+    }
+  }
+
+  .homeCard {
+    padding: 1rem;
+    margin-top: 30px;
+    width: fit-content;
+
+    &-booking {
+      input {
+        width: 180%;
+      }
+    }
+
+    .slides__btn {
+      margin-left: 150px;
+      width: fit-content;
+    }
+  }
+}

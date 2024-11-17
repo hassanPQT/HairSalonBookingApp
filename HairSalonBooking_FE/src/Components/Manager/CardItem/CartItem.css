@@ -1,0 +1,10 @@
+.card-item{
+    border: 1px solid #ddd;
+    padding: 10px 20px;
+    border-radius: 8px;
+    background-color: #fff;
+}
+
+.card-item h4{
+    text-align: center;
+}

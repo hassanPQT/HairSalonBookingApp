@@ -1,0 +1,222 @@
+:root {
+  --PrimaryColor: #1b5077;
+  --WhiteColor: hsl(0, 0%, 100%);
+  --textColor: hsl(240, 1%, 48%);
+  --HoverColor: #1b5077;
+  --blackColor: hsl(0, 0%, 18%);
+  --whiteColorDeam: hsl(0, 0%, 93%);
+  --greyBg: hsl(0, 0%, 96%);
+  --greyText: rgb(190, 190, 190);
+  --inputColor: hsl(330, 12%, 97%);
+  --boxShadow: 0 2px 8px 2px rgba(178, 178, 178, 0.334);
+}
+
+.service {
+  &__container {
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px 0;
+
+    &-title {
+      h2 {
+        text-align: center;
+        font-size: 30px;
+        color: var(--blackColor);
+        line-height: 1.5rem;
+        padding-bottom: 2rem;
+        font-size: 30px;
+      }
+      p {
+        text-align: center;
+        margin-bottom: 30px;
+        font-size: 13px;
+        color: var(--textColor);
+        font-weight: 500;
+      }
+    }
+    .mainContent {
+      gap: 1rem;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      .service__combo {
+        background-color: #fff;
+        border-radius: 1rem;
+        overflow: hidden;
+        padding: 0.5rem;
+        box-shadow: 0 2px 8px 2px rgba(178, 178, 178, 0.334);
+        width: 100%;
+
+        .icon {
+          font-size: 20px;
+          color: var(--textColor);
+        }
+
+        .small {
+          font-weight: 500;
+          color: var(--textColor);
+        }
+
+        &-img {
+          position: relative;
+          height: 200px;
+          width: 100%;
+          border-radius: 1rem;
+          overflow: hidden;
+
+          img {
+            width: 340px;
+            height: 100%;
+          }
+        }
+        &-discount {
+          position: absolute;
+          top: 10px;
+          right: 10px;
+          padding: 5px 10px;
+          background: var(--PrimaryColor);
+          color: var(--WhiteColor);
+          border-radius: 3rem;
+          font-size: 10px;
+          font-weight: 500;
+        }
+        .service__details {
+          padding: 1rem;
+
+          &-price {
+            justify-content: space-between;
+
+            h4 {
+              color: var(--blackColor);
+              font-weight: 700;
+              font-size: 1.1rem;
+            }
+            span {
+              padding: 5px 10px;
+              color: var(--HoverColor);
+              background: var(--greyBg);
+              font-size: 10px;
+              font-weight: 600;
+              border-radius: 3rem;
+            }
+          }
+
+          .service__name {
+            width: 100%;
+            flex-wrap: wrap;
+            justify-content: flex-start;
+            padding: 1rem 0;
+            gap: 0.5rem;
+
+            &-single {
+              padding: 5px 10px;
+              border-radius: 5px;
+              background: var(--greyBg);
+              gap: 0.5rem;
+            }
+          }
+          &-description {
+            display: -webkit-box;
+            -webkit-line-clamp: 3;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            min-height: 4rem;
+          }
+          &-btn {
+            margin-top: 1rem;
+            width: 100%;
+            text-align: center;
+            justify-content: center;
+            padding: 0.6rem;
+            color: var(--WhiteColor);
+            font-weight: 600;
+            gap: 0.5rem;
+            .service__details-icon {
+              color: var(--WhiteColor);
+            }
+          }
+        }
+
+        &:hover {
+          transform: translateY(-7px);
+        }
+      }
+    }
+  }
+}
+@media (min-width: 640px) {
+  .service {
+    &__container {
+      .mainContent {
+        .service__combo {
+          width: 45%;
+
+          .icon {
+            font-size: 15px;
+          }
+          .service__details {
+            padding: 1rem;
+
+            .service__name {
+              &-single {
+                .icon {
+                  width: 10px;
+                }
+                small {
+                  font-size: 8px;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+@media (min-width: 768px) {
+}
+@media (min-width: 1024px) {
+  .service {
+    &__container {
+      .mainContent {
+        .service__combo {
+          width: 30%;
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 1280px) {
+  .service {
+    &__container {
+      .mainContent {
+        .service__combo {
+          .icon {
+            font-size: 25px;
+          }
+          .service__details {
+            padding: 1rem;
+
+            .service__name {
+              &-single {
+                .icon {
+                  width: 18px;
+                }
+                small {
+                  font-size: 12px;
+                }
+              }
+            }
+            &-description {
+              font-size: 13px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+@media (min-width: 1536px) {
+}

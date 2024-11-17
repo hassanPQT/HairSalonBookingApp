@@ -1,0 +1,156 @@
+.header-staff {
+  display: flex;
+  border-bottom: 1px solid #ddd;
+  background-color: #fff;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+  position: sticky;
+  top: 0; /* Keeps the header at the top */
+  z-index: 1000;
+
+  &__logo {
+    width: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-right: 1px solid #ddd;
+    transition: all 0.2s, background 0s;
+
+    img {
+      height: 50px;
+      cursor: pointer;
+    }
+    &--collapsed {
+      width: 80px;
+      transition: all 0.2s, background 0s;
+      img {
+        width: 40px;
+        height: 40px;
+      }
+    }
+  }
+
+  &__nav {
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex: 1;
+
+    &-left {
+      display: flex;
+      align-items: center;
+      font-size: 20px;
+    }
+  }
+
+  &__collapse {
+    display: flex;
+    align-items: center;
+    margin-right: 20px;
+    cursor: pointer;
+  }
+
+  &__user-info {
+    display: flex;
+    align-items: center;
+    margin-right: 20px;
+  }
+
+  &__text {
+    display: flex;
+    flex-direction: column;
+    margin-right: 10px;
+    text-align: center;
+  }
+  &__name-page {
+    font-size: 26px;
+    font-weight: bold;
+    color: #2c2e5f;
+    margin-left: 10px;
+  }
+
+  &__name {
+    font-size: 14px;
+    color: #2c2e5f;
+  }
+
+  &__role {
+    font-size: 12px;
+    color: #b0b0b0;
+  }
+
+  &__avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    overflow: hidden;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  &__dropdown {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 250px; /* Giảm chiều rộng xuống 250px */
+    padding: 15px; /* Điều chỉnh padding nếu cần */
+    text-align: left;
+    position: absolute;
+    margin-right: 10px;
+    right: 0;
+    z-index: 1001;
+
+    &--header {
+      display: flex;
+      align-items: center;
+      margin-bottom: 15px; /* Giảm khoảng cách dưới */
+      padding-bottom: 15px; /* Giảm khoảng cách dưới */
+      border-bottom: 1px solid #f0f0f0;
+
+      & h2 {
+        font-size: 16px;
+      }
+
+      & img {
+        border-radius: 50%;
+        width: 50px; /* Giảm kích thước ảnh */
+        height: 50px; /* Giảm kích thước ảnh */
+        margin-right: 10px; /* Giảm khoảng cách bên phải */
+      }
+    }
+
+    & p {
+      font-size: 13px;
+      color: #888;
+      margin: 0;
+    }
+
+    & a {
+      display: flex;
+      align-items: center;
+      color: #333;
+      text-decoration: none;
+      font-size: 13px; /* Giảm kích thước chữ */
+      margin: 8px 0; /* Giảm khoảng cách trên/dưới */
+      padding: 8px; /* Điều chỉnh padding nếu cần */
+      transition: background-color 0.3s;
+
+      & i {
+        display: flex;
+        justify-content: center;
+        margin-right: 8px;
+        color: #888;
+      }
+
+      &:hover {
+        background-color: #f0f0f0; /* Màu nền khi hover */
+        color: #333; /* Giữ nguyên màu chữ */
+        border-radius: 8px; /* Thêm border-radius cho nền khi hover */
+      }
+    }
+  }
+}

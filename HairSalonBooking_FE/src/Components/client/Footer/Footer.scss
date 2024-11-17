@@ -1,0 +1,107 @@
+:root {
+  --PrimaryColor: #1b5077;
+  --WhiteColor: hsl(0, 0%, 100%);
+  --textColor: hsl(240, 1%, 48%);
+  --HoverColor: #1b5077;
+  --blackColor: hsl(0, 0%, 18%);
+  --whiteColorDeam: hsl(0, 0%, 93%);
+  --greyBg: hsl(0, 0%, 96%);
+  --greyText: rgb(190, 190, 190);
+  --inputColor: hsl(330, 12%, 97%);
+}
+
+.footer {
+  background: #fff;
+  padding: 2rem 2rem;
+
+  &__container {
+    gap: 1.5rem;
+    text-align: center;
+    .footer__Logo {
+      padding-bottom: 0.5rem;
+      a {
+        color: var(--blackColor);
+        font-weight: 500;
+        cursor: pointer;
+        align-items: center;
+        justify-content: center;
+
+        img {
+          cursor: pointer;
+          width: 50px;
+        }
+      }
+    }
+
+    .footer__socials {
+      gap: 0.5rem;
+      margin: auto;
+      justify-content: center;
+
+      &-icon {
+        font-size: 30px;
+        background: var(--PrimaryColor);
+        border-radius: 50%;
+        padding: 8px;
+        color: var(--WhiteColor);
+
+        &:hover {
+          background: var(--blackColor);
+        }
+      }
+    }
+    .footer__Links {
+      display: grid;
+      row-gap: 0.2rem;
+
+      &-linkTitle {
+        padding-bottom: 0.5rem;
+        color: var(--blackColor);
+        font-weight: 700;
+      }
+
+      li {
+        &:hover {
+          transform: translateX(10px);
+          a {
+            color: var(--PrimaryColor);
+          }
+        }
+      }
+      a,
+      .phone,
+      .email {
+        color: var(--textColor);
+        font-size: 13px;
+        font-weight: 500;
+      }
+    }
+  }
+}
+
+@media (min-width: 640px) {
+}
+@media (min-width: 768px) {
+  .footer {
+    &__container {
+      gap: 1rem;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: flex-start;
+    }
+  }
+}
+@media (min-width: 1024px) {
+  .footer {
+    padding: 4rem 6rem;
+  }
+}
+
+@media (min-width: 1280px) {
+  .footer {
+    padding: 4rem 10rem;
+  }
+}
+@media (min-width: 1536px) {
+}

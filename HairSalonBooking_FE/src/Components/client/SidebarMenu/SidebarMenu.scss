@@ -1,0 +1,188 @@
+:root {
+  --PrimaryColor: #1b5077;
+  --WhiteColor: hsl(0, 0%, 100%);
+  --textColor: hsl(240, 1%, 48%);
+  --HoverColor: #1b5077;
+  --blackColor: hsl(0, 0%, 18%);
+  --whiteColorDeam: hsl(0, 0%, 93%);
+  --greyBg: hsl(0, 0%, 96%);
+  --greyText: rgb(190, 190, 190);
+  --inputColor: hsl(330, 12%, 97%);
+}
+
+.sidebar {
+  width: 240px;
+  height: 100%;
+  background: var(--PrimaryColor);
+  position: absolute;
+  padding: 10px 30px;
+  transition: all 0.6s;
+  left: -100%;
+  border-radius: 0 1.3rem;
+  &__logo {
+    width: 50px;
+    height: 40px;
+    color: aliceblue;
+  }
+  ul {
+    padding: 0;
+    li {
+      list-style-type: none;
+      margin: 10px 0;
+      a {
+        color: var(--WhiteColor);
+        text-decoration: none;
+        font-size: 16px;
+        display: block;
+        padding: 10px 15px;
+        border-radius: 6px;
+      }
+      :hover,
+      .active {
+        background: #236797;
+      }
+    }
+  }
+}
+.active {
+  left: 0;
+}
+
+// .sidebar {
+//   height: 100%;
+//   width: 220px;
+//   background-color: var(--PrimaryColor);
+//   left: 0;
+//   top: 0;
+//   &__header {
+//     height: 100px;
+//     width: 100%;
+//     display: flex;
+//     align-items: center;
+//     justify-content: center;
+//     &-logo {
+//       font-size: 40px;
+//       color: var(--WhiteColor);
+//     }
+//     &-name {
+//       font-size: 22px;
+//       color: var(--WhiteColor);
+//       font-weight: 600;
+//     }
+//   }
+//   &__nav {
+//     height: 100%;
+//     li {
+//       position: relative;
+//       list-style: none;
+//       transition: all 0.4s ease;
+//       :hover {
+//         background: #236797;
+//       }
+//     }
+//   }
+// }
+
+// .sidebar {
+//   position: fixed;
+//   top: 0;
+//   left: 0;
+//   height: 100%;
+//   width: 260px;
+//   background-color: var(--PrimaryColor);
+//   .sidebar__logo {
+//     height: 60px;
+//     width: 100%;
+//     display: flex;
+//     align-items: center;
+//     .sidebar__logo-icon {
+//       font-size: 30px;
+//       color: var(--WhiteColor);
+
+//       height: 50px;
+//       min-width: 78px;
+//       text-align: center;
+//       line-height: 50px;
+//     }
+//     .sidebar__logo-name {
+//       font-size: 20px;
+//       color: var(--WhiteColor);
+//       font-weight: 600;
+//     }
+//   }
+//   .sidebar__nav {
+//     height: 100%;
+//     padding-top: 40px;
+//     li {
+//       position: relative;
+//       list-style: none;
+//       transition: all 0.4s ease;
+//       :hover {
+//         background: #236797;
+//       }
+//       .sidebar__nav-icon {
+//         height: 40px;
+//         min-width: 78px;
+//         text-align: center;
+//         line-height: 50px;
+//         color: var(--WhiteColor);
+//         font-size: 20px;
+//       }
+//       a {
+//         display: flex;
+//         align-items: center;
+//         text-decoration: none;
+//         .sidebar__nav-name {
+//           font-size: 20px;
+//           font-weight: 400;
+//           color: var(--WhiteColor);
+//         }
+//       }
+//       .sidebar__nav-dropdown {
+//         display: flex;
+//         align-items: center;
+//         justify-content: space-between;
+//       }
+//       .sidebar__submenu {
+//         padding: 6px 6px 14px 80px;
+//         margin-top: -10px;
+//         background: #236797;
+//         // display: none;
+//         a {
+//           color: var(--WhiteColor);
+//           font-size: 15px;
+//           padding: 5px 0;
+//           white-space: nowrap;
+//           opacity: 0.6;
+//           transition: all 0.3s ease;
+//           :hover {
+//             opacity: 1;
+//           }
+//         }
+//         .sidebar__submenu-link {
+//           display: none;
+//         }
+//       }
+//     }
+//   }
+// }
+// .close {
+//   .sidebar__nav {
+//     li {
+//       .sidebar__submenu {
+//         position: absolute;
+//         left: 100%;
+//         top: 0;
+//         margin-top: 0;
+//         padding: 10px 20px;
+//         border-radius: 0 6px 6px 0;
+
+//         .sidebar__submenu-link {
+//           font-size: 18px;
+//           opacity: 1;
+//           display: block;
+//         }
+//       }
+//     }
+//   }
+// }

@@ -1,0 +1,105 @@
+.admin-dashboard {
+    padding: 20px;
+
+    &__header {
+        display: flex;
+        padding: 0 20px;
+        // justify-content: center;
+        justify-content: space-between;
+        flex-direction: row;
+        &-searchBar {
+          width: 100%;
+          position: relative;
+          max-width: 400px;
+          display: flex;
+          align-items: center;
+          margin-bottom: 20px;
+          input {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 50px;
+            margin-right: 10px;
+            font-size: 12px;
+            width: 100%;
+            padding: 10px 10px 10px 40px;
+          }
+          .searchBar-icon {
+            position: absolute;
+            left: 10px;
+            align-items: center;
+            transform: translateY(-50%);
+            font-size: 20px;
+            color: #888;
+            margin-top: 20px;
+          }
+    
+          .close-icon {
+            position: absolute;
+            right: 20px;
+            align-items: center;
+            transform: translateY(-50%);
+            font-size: 15px;
+            color: #888;
+            margin-top: 15px;
+          }
+        }
+        &-filter {
+          display: flex;
+          justify-content: flex-end;
+          align-items: center;
+          margin-bottom: 20px;
+         
+          &--select {
+            white-space: nowrap;
+            padding: 8px 10px;
+            border: 1px solid #ccc;
+            border-radius: 50px;
+            font-size: 14px;
+            font-weight: 400;
+            background-color: var(--WhiteColor);
+            margin-left: 10px;
+            line-height: 1.5;
+            color: black;
+          }
+        }
+      }
+    &__container {
+        margin-bottom: 20px;
+    }
+
+    &__chart-container {
+        margin-top: 20px;
+
+        &__legend {
+            display: flex;
+            justify-content: space-around;
+            margin-top: 20px;
+
+            &-item {
+                display: flex;
+                align-items: center;
+
+                span {
+                    display: inline-block;
+                    width: 10px;
+                    height: 10px;
+                    border-radius: 50%;
+                    margin-right: 5px;
+                }
+
+                &.new span {
+                    background-color: #20c997;
+                }
+
+                &.returning span {
+                    background-color: #6f42c1;
+                }
+
+                &.others span {
+                    background-color: #ffc107;
+                }
+            }
+        }
+    }
+}

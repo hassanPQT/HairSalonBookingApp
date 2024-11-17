@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Booking Reminder</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+        .email-container {
+            max-width: 600px;
+            margin: 20px auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        .header {
+            background-color: #87CEEB; /* Light blue */
+            color: black; /* Changed text color to black */
+            padding: 10px;
+            text-align: center;
+            border-top-left-radius: 8px;
+            border-top-right-radius: 8px;
+        }
+        .header h1 {
+            margin: 0;
+            font-size: 24px;
+        }
+        .content {
+            padding: 20px;
+        }
+        .content h2 {
+            color: #333;
+            font-size: 20px;
+        }
+        .content p {
+            font-size: 16px;
+            color: #555;
+            line-height: 1.6;
+        }
+        .content .details {
+            background-color: #f9f9f9;
+            padding: 15px;
+            border-radius: 5px;
+            margin-top: 20px;
+        }
+        .content .details p {
+            margin: 5px 0;
+            font-weight: bold;
+        }
+        .footer {
+            text-align: center;
+            padding: 20px;
+            font-size: 14px;
+            color: #777;
+        }
+        .footer a {
+            color: #87CEEB;
+            text-decoration: none;
+        }
+        .button {
+            display: inline-block;
+            padding: 10px 20px;
+            margin-top: 20px;
+            background-color: #87CEEB; /* Light blue */
+            color: black; /* Text color changed to black */
+            text-decoration: none;
+            border-radius: 5px;
+        }
+        .button:hover {
+            background-color: #4682B4; /* Darker blue for hover */
+        }
+    </style>
+</head>
+<body>
+
+<div class="email-container">
+    <div class="header">
+        <h1>Appointment Reminder</h1>
+    </div>
+
+    <div class="content">
+        <h2>Hello [[${name}]],</h2>
+        <p>This is a reminder for your appointment with us on [[${date}]]. Please see the appointment details below:</p>
+
+        <div class="details">
+            <p><strong>Stylist Name:</strong> [[${stylistName}]]</p>
+            <p><strong>Appointment Date:</strong> [[${date}]]</p>
+            <p><strong>Appointment Time:</strong> [[${time}]]</p>
+            <p><strong>Location:</strong> [[${address}]]</p>
+        </div>
+
+    </div>
+
+    <div class="footer">
+        <p>Sincerely, <br> The F-Salon Team</p>
+    </div>
+</div>
+
+</body>
+</html>

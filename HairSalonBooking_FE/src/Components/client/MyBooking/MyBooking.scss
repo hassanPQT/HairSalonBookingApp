@@ -1,0 +1,249 @@
+.myBooking {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+
+  color: #333;
+  font-weight: 300;
+  // padding: 30px;
+  padding-top: 60px;
+  margin-bottom: 30px;
+
+  &__tabs {
+    width: 80%;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 15px;
+
+    label {
+      position: relative;
+      display: inline-block;
+      padding: 15px 15px 25px;
+      border: 1px solid transparent;
+      border-bottom: 0;
+      cursor: pointer;
+      font-weight: 600;
+      &:hover {
+        color: var(--greyText);
+      }
+    }
+    .label-active {
+      border-bottom: 3px solid var(--PrimaryColor);
+    }
+    &-panels {
+      .tab-panel {
+        // display: none;
+        padding: 30px 0;
+        border-top: 1px solid #ccc;
+        .panel {
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: flex-start;
+          max-height: 600px;
+          overflow-y: scroll;
+          &__card {
+            background-color: #fff;
+            border-radius: 15px;
+            padding: 20px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            text-align: center;
+            position: relative;
+            width: 100%;
+            flex-direction: column;
+            img {
+              border-radius: 15px;
+              width: 150px;
+              height: 150px;
+            }
+            &-info {
+              .info__title {
+                display: flex;
+                justify-content: space-between;
+                color: var(--PrimaryColor);
+                font-size: 18px;
+                border-bottom: 1px solid var(--PrimaryColor);
+                &-right {
+                  display: flex;
+                  flex-direction: column;
+                  text-align: end;
+                }
+              }
+              .info__content {
+                padding-top: 1rem;
+                label {
+                  padding: 10px 0;
+                  &:hover {
+                    color: #333;
+                  }
+                }
+                p {
+                  text-align: start;
+                }
+                &-lists {
+                  text-align: start;
+                  height: 150px;
+                  overflow: hidden;
+                  overflow-y: scroll;
+
+                  div {
+                    padding-left: 1rem;
+                    align-items: center;
+                    .lists-icon {
+                      color: var(--PrimaryColor);
+                    }
+                  }
+                }
+              }
+              .panel-actions {
+                display: flex;
+                justify-content: space-around;
+              }
+            }
+            .myBooking-icon {
+              color: #fff;
+              font-size: 20px;
+              align-items: center;
+            }
+          }
+        }
+      }
+    }
+  }
+  &__model {
+    button {
+      background-color: var(--PrimaryColor);
+      color: #fff;
+      padding: 20px;
+    }
+    .model__rating {
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+      flex-direction: row-reverse;
+
+      input {
+        position: absolute;
+        appearance: none;
+      }
+
+      label {
+        cursor: pointer;
+        font-size: 30px;
+        position: relative;
+        display: inline-block;
+        transition: transform 0.3s ease;
+
+        svg {
+          fill: #666;
+          transition: fill 0.3s ease;
+        }
+        &:hover {
+          transform: scale(1.2);
+          animation: pulse 0.6s infinite alternate;
+
+          svg {
+            fill: #ff9e0b;
+            filter: drop-shadow(0 0 15px rgba(255, 158, 11, 0.9));
+            animation: shimmer 1s ease infinite alternate;
+          }
+        }
+
+        input:checked + label {
+          svg {
+            fill: #ff9e0b;
+            filter: drop-shadow(0 0 15px rgba(255, 158, 11, 0.9));
+            animation: pulse 0.8s infinite alternate;
+          }
+        }
+
+        // This part ensures that when one star is checked, the previous stars are also filled
+        input:checked + label ~ label svg {
+          fill: #ff9e0b; // Change the fill color for the checked and previous stars
+        }
+
+        input:checked + label:hover ~ label svg {
+          fill: #e58e09;
+        }
+      }
+
+      // Hovering effect for the stars
+      input:hover + label svg,
+      input:hover + label ~ label svg {
+        fill: #ff9e0b;
+        filter: drop-shadow(0 0 15px rgba(255, 158, 11, 0.9));
+      }
+
+      input:checked ~ label svg {
+        fill: #ffa723;
+      }
+    }
+
+    .model__feedback {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      justify-content: center;
+      label {
+        font-size: 1.25rem;
+        color: var(--PrimaryColor);
+        font-weight: 700;
+        position: relative;
+        top: 0.5rem;
+        margin: 0 0 0 7px;
+        padding: 0 3px;
+        background: #fff;
+        width: fit-content;
+      }
+      textarea[type="text"] {
+        padding: 11px 10px;
+        font-size: 0.75rem;
+        border: 2px var(--PrimaryColor) solid;
+        border-radius: 5px;
+        background: #fff;
+        &:focus {
+          outline: none;
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 1024px) {
+  .myBooking {
+    &__tabs {
+      &-panels {
+        .tab-panel {
+          .panel {
+            gap: 20px;
+            &__card {
+              width: 48%;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 1280px) {
+  .myBooking {
+    &__tabs {
+      &-panels {
+        .tab-panel {
+          .panel {
+            gap: 20px;
+            &__card {
+              width: 30%;
+            }
+          }
+        }
+      }
+    }
+  }
+}

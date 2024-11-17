@@ -1,0 +1,223 @@
+ .manager-create-stylist {
+    max-width: 800px;
+    margin: 40px auto;
+    background-color: #ffffff;
+    padding: 24px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+
+    &__container {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    &__breadcrumb {
+      font-size: 14px;
+      color: #6b7280;
+      margin-bottom: 20px;
+      margin-top: 20px;
+      margin-left: 40px;
+  
+      &-link {
+        color: #6b7280;
+        text-decoration: none;
+  
+        &:hover {
+          color: #374151;
+        }
+      }
+  
+      &-current {
+        color: #374151;
+        margin-left: 8px;
+      }
+    }
+  
+    &__header {
+      font-size: 1.25rem;
+      font-weight: 600;
+      margin-bottom: 16px;
+    }
+  
+    &__avatar-section {
+      display: flex;
+      align-items: center;
+      margin-bottom: 24px;
+    }
+  
+    &__avatar {
+      width: 96px;
+      height: 96px;
+      border-radius: 50%;
+      background-color: #e2e8f0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+  
+      & img {
+        width: 96px;
+        height: 96px;
+        border-radius: 50%;
+      }
+  
+      svg {
+        font-size: 2rem;
+        color: #a0aec0;
+      }
+    }
+  
+    &__avatar-info {
+      margin-left: 24px;
+    }
+  
+    &__avatar-title {
+      font-size: 1.125rem;
+      font-weight: 600;
+    }
+  
+    &__avatar-description {
+      font-size: 0.875rem;
+      color: #718096;
+    }
+  
+    &__upload-btn {
+      display: inline-block;
+      margin-top: 8px;
+      padding: 8px 16px;
+      background-color: #1b5077;
+      color: #ffffff;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      text-align: center;
+      &:hover {
+        background-color: #16435f;
+      }
+    }
+  
+    &__form-section {
+      border-top: 1px solid #e2e8f0;
+      padding-top: 16px;
+    }
+    &__form-grid {
+      display: grid;
+      gap: 24px;
+      grid-template-columns: repeat(1, 1fr);
+  
+      &--half-width {
+        grid-template-columns: repeat(2, 1fr);
+      }
+  
+      &--full-width {
+        grid-template-columns: 1fr;
+      }
+    }
+  
+    &__form-group {
+      display: flex;
+      flex-direction: column;
+  
+      &--full-width {
+        grid-column: span 2;
+      }
+    }
+  
+    &__label {
+      color: #4a5568;
+      margin-bottom: 4px;
+    }
+  
+    &__input,
+    &__select {
+      padding: 8px;
+      border: 1px solid #cbd5e0;
+      border-radius: 4px;
+      width: 100%;
+  
+      &::placeholder {
+        color: #a0aec0;
+      }
+
+      &:-webkit-autofill,
+      &:-webkit-autofill:hover,
+      &:-webkit-autofill:focus,
+      &:-webkit-autofill:active {
+        -webkit-box-shadow: 0 0 0 30px white inset !important;
+        -webkit-text-fill-color: #000 !important;
+      }
+    }
+
+    &__button-container {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    &__button {
+      background-color: #1b5078;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 25px;
+      cursor: pointer;
+      width: 100%;
+      max-width: 120px;
+      height: 48px;
+      font-size: 16px;
+      font-weight: bold;
+      text-transform: uppercase;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-top: 30px;
+  
+      &:hover {
+        background-color: #16435f;
+      }
+    }
+   
+    &__skills-list {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 10px;
+    }
+  
+    &__option {
+      display: flex;
+      align-items: center;
+      cursor: pointer;
+      transition: background-color 0.2s;
+      padding: 8px;
+  
+      &:hover {
+        background-color: #f0f4f8;
+      }
+  
+      & span {
+        display: inline-block;
+        align-items: center;
+        line-height: 16px;
+        color: #4a5568;
+        margin-left: 10px;
+      }
+    }
+  
+    &__checkbox {
+      margin-right: 8px;
+      appearance: none;
+      width: 16px;
+      height: 16px;
+      border: 2px solid #1b5077;
+      border-radius: 4px;
+      cursor: pointer;
+  
+      &:checked {
+        background-color: #1b5077;
+        border: 2px solid #1b5077;
+      }
+  
+      &:hover {
+        border-color: #16435f;
+      }
+    }
+  }

@@ -1,0 +1,58 @@
+.payment-confirmation {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: white;
+    border-radius: 8px;
+    padding: 2rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    max-width: 450px;
+    width: 100%;
+    margin: auto;
+    font-family: Arial, sans-serif;
+  
+    &__body {
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  
+    &__icon-container {
+      margin-bottom: 1rem;
+    }
+  
+    &__title {
+      color: #4CAF50;
+      font-size: 1.5rem;
+      margin-bottom: 1rem;
+      text-transform: uppercase;
+      font-weight: bold;
+    }
+  
+    &__details {
+      margin-bottom: 1.5rem;
+      text-align: center;
+  
+      p {
+        margin: 0.5rem 0;
+        color: #666;
+      }
+    }
+  
+    &__dashboard-button {
+      background-color: #1B5077;
+      color: white;
+      border: none;
+      padding: 0.75rem 1.5rem;
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: 1rem;
+      transition: background-color 0.3s;
+  
+      &:hover {
+        background-color: #16435F;
+      }
+    }
+  }
+  

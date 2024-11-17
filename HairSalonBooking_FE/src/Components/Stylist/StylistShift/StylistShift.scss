@@ -1,0 +1,186 @@
+.StylistShift {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  padding: 1rem;
+  // height: 78vh;
+
+  &__calendar {
+    // flex: 0 0 auto;
+    width: 50%;
+    background-color: #ffffff;
+    border-radius: 20px;
+    padding: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    margin-right: 20px;
+    .events {
+      display: flex;
+      justify-content: space-around;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      li {
+        width: 100%;
+      }
+    }
+    .events .ant-badge-status {
+      width: 50%;
+      overflow: hidden;
+      font-size: 6px;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+    }
+    .notes-month {
+      font-size: 14px;
+      text-align: center;
+    }
+    .notes-month section {
+      font-size: 14px;
+    }
+    .ant-picker-calendar.ant-picker-calendar-full .ant-picker-calendar-date {
+      height: 70px;
+    }
+  }
+
+  &__week {
+    background-color: #ffffff;
+    border-radius: 20px;
+    padding: 5px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 50%;
+    &-content {
+      margin-right: 20px;
+
+      .StylistShift__week-timeline {
+        padding-left: 4rem;
+        height: 40px;
+        width: 100%;
+        display: flex;
+        justify-content: space-around;
+
+        .spacer {
+          height: 112px;
+        }
+
+        .time-marker {
+          height: 50px;
+          display: flex;
+          align-items: center;
+          font-size: 0.875rem;
+          color: #666;
+          button {
+            width: 100px;
+            font-weight: 600;
+            border-radius: 20px;
+            padding: 5px;
+
+            background-color: #ffffff;
+          }
+          .morning {
+            color: #52c41a;
+            border: 2px solid #52c41a;
+            &:hover {
+              color: #ffffff;
+              background-color: #52c41a;
+            }
+          }
+          .afternoon {
+            color: #faad14;
+            border: 2px solid #faad14;
+            &:hover {
+              color: #ffffff;
+              background-color: #faad14;
+            }
+          }
+          .evening {
+            color: #ff4d4f;
+            border: 2px solid #ff4d4f;
+            &:hover {
+              color: #ffffff;
+              background-color: #ff4d4f;
+            }
+          }
+        }
+      }
+
+      .StylistShift__week-days {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        overflow: hidden;
+        padding: 20px;
+        .day {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          height: 40px;
+          .date {
+            width: 15%;
+            // padding: 0.5rem;
+            background-color: var(--PrimaryColor);
+            border-radius: 4px;
+            text-align: center;
+
+            &-num {
+              font-size: 1rem;
+              font-weight: 600;
+              color: #ffffff;
+            }
+
+            &-day {
+              font-size: 0.875rem;
+              color: #f5f5f5;
+            }
+          }
+
+          .events {
+            width: 85%;
+            padding: 2rem;
+            .date-check {
+              display: flex;
+              justify-content: space-between;
+              border-bottom: 1px solid #f5f5f5;
+              .shift-group {
+                display: flex;
+                align-items: center;
+                .morning {
+                  color: #52c41a;
+                }
+                .afternoon {
+                  color: #faad14;
+                }
+                .evening {
+                  color: #ff4d4f;
+                }
+                .shift-label {
+                  font-size: 0.875rem;
+                  color: #666;
+                  border-radius: 15px;
+                  padding: 0.5rem;
+                  font-size: 500;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+    &-action {
+      display: flex;
+      justify-content: center;
+      button {
+        color: #fff;
+        background-color: var(--PrimaryColor);
+        border-radius: 20px;
+        border: none;
+        padding: 5px;
+        width: 100px;
+        font-size: 18px;
+        font-weight: 500;
+      }
+    }
+  }
+}

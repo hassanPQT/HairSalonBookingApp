@@ -1,0 +1,133 @@
+:root {
+  --PrimaryColor: #1b5077;
+  --WhiteColor: hsl(0, 0%, 100%);
+  --textColor: hsl(240, 1%, 48%);
+  --HoverColor: #1b5077;
+  --blackColor: hsl(0, 0%, 18%);
+  --whiteColorDeam: hsl(0, 0%, 93%);
+  --greyBg: hsl(0, 0%, 96%);
+  --greyText: rgb(190, 190, 190);
+  --inputColor: hsl(330, 12%, 97%);
+}
+
+.about {
+  &__container {
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px 0;
+    &-title {
+      text-align: center;
+      font-size: 30px;
+      color: var(--blackColor);
+      line-height: 1.5rem;
+      padding-bottom: 2rem;
+      font-size: 30px;
+    }
+
+    .mainContent {
+      gap: 1rem;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      .about__single {
+        text-align: center;
+
+        img {
+          background: #99c7e8;
+          width: 100px;
+          border-radius: 50%;
+          padding: 1rem;
+        }
+        h3 {
+          font-weight: 700;
+          color: var(--blackColor);
+          padding: 0.5rem;
+        }
+
+        p {
+          font-size: 13px;
+          font-weight: 500;
+          padding-bottom: 0.5rem;
+          color: var(--textColor);
+        }
+      }
+    }
+
+    .about__video {
+      margin-top: 2rem;
+      background: linear-gradient(
+          to top,
+          rgba(0, 0, 0, 0.73),
+          rgba(0, 0, 0, 0.699)
+        ),
+        url("https://i.pinimg.com/736x/ca/92/63/ca92637eb9911281cc2add2aa22fb945.jpg");
+      background-position: center;
+      background-size: cover;
+      background-repeat: no-repeat;
+      .about__videoCard {
+        gap: 2rem;
+        padding: 2rem 1rem;
+
+        .about__cardText {
+          h2 {
+            color: var(--WhiteColor);
+            font-weight: 600;
+            padding-bottom: 1rem;
+          }
+
+          p {
+            color: var(--WhiteColor);
+            opacity: 0.7;
+            font-size: 12px;
+            font-weight: 400;
+            letter-spacing: 1px;
+          }
+        }
+      }
+      .about__cardVideo {
+        border: 2px solid var(--WhiteColor);
+        height: 200px;
+        width: 100%;
+        border-radius: 10px;
+        overflow: hidden;
+
+        video {
+          height: 100%;
+          width: 100%;
+          object-fit: cover;
+        }
+      }
+    }
+  }
+}
+@media (min-width: 640px) {
+}
+@media (min-width: 768px) {
+}
+@media (min-width: 1024px) {
+  .about {
+    &__container {
+      .mainContent {
+        .about__single {
+          width: 30%;
+        }
+      }
+
+      .about__video {
+        .about__videoCard {
+          gap: 2rem;
+          padding: 2rem 1rem;
+          display: flex;
+          .about__cardText {
+            width: 60%;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 1280px) {
+}
+@media (min-width: 1536px) {
+}

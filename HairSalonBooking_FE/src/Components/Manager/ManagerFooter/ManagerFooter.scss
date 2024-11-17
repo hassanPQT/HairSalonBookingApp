@@ -1,0 +1,21 @@
+.manager-footer {
+  background-color: #ffff;
+  text-align: center;
+  padding: 20px 0;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  width: 100%; // Giả sử sidebar rộng 200px khi mở rộng
+  border-left: 1px solid #dddd;
+
+  &__content {
+    color: #595959;
+    font-size: 14px;
+  }
+
+  &__text {
+    margin: 0;
+  }
+
+  &--collapsed {
+    width: 100%;
+  }
+}

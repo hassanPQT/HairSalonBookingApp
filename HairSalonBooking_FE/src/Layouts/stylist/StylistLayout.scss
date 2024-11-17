@@ -1,0 +1,47 @@
+.admin-layout {
+  &__inner {
+    display: flex;
+    flex-direction: column; // Ensure that inner elements stack vertically
+    height: 100%; // Fill the height of the parent
+  }
+
+  &__sider {
+    position: fixed;
+    left: 0;
+    height: calc(100vh - 64px); // Adjust if your header height is different
+    overflow-y: auto;
+    theme: light;
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column; // Allow stacking of content and footer
+    transition: margin-left 0.2s;
+
+    &--expanded {
+      margin-left: 200px; // Width of expanded sider
+    }
+
+    &--collapsed {
+      margin-left: 80px; // Width of collapsed sider
+    }
+  }
+
+  &__content-inner {
+    padding: 20px;
+    overflow-y: auto; // Ensure content can scroll
+    flex: 1; // Allow this to grow and fill the available space
+    height: 0; // Prevent unnecessary height
+  }
+
+  &__footer {
+    margin-top: auto; // Push the footer to the bottom
+  }
+}
+
+// Add media query for responsiveness if needed
+@media (max-width: 768px) {
+  .admin-layout__content {
+    margin-left: 0 !important;
+  }
+}
