@@ -1,9 +1,18 @@
-#Hair Salon Booking web application:<br>
-    ##- Build with team 5 <br>
-    ##- Brief: A web app developed for booking and manage hair salon branch enabling efficient operations for multiple user roles with main features as follows:  
-             + Seach for services, choose stylist, schedule appointments for booking, Update booking, cancel booking, login with google, auto sendmail, payment<br>
-             + Manage salon with CRUD Service, CRUD staff account, CRUD stylist account, CRUD Slot, Manage stylist schedule allow them choose their working day in week, Manage booking process,...<br>
-    ##- Technologies: The  application is BE is build with Spring Boot framework,Rest APis, and front end build with React.js, use MySQL to manage database, using VnPay sandbox for payment method, Firebase to storge img, JWT for authentication, digital ocean to deploy Back-end code, Vercel to deploy Front-end code
+<h1>Hair Salon Booking Web Application</h1>
+<ul>
+    <li><strong>Build with Team 5</strong></li>
+    <li>
+        <strong>Brief:</strong> A web app developed for booking and managing hair salon branches, enabling efficient operations for multiple user roles with main features as follows:
+        <ul>
+            <li>Search for services, choose stylist, schedule appointments for booking, update booking, cancel booking, login with Google, auto send mail, payment</li>
+            <li>Manage salon with CRUD Service, CRUD staff account, CRUD stylist account, CRUD Slot, manage stylist schedule allowing them to choose their working days in the week, manage booking process, etc.</li>
+        </ul>
+    </li>
+    <li>
+        <strong>Technologies:</strong> The application backend is built with Spring Boot framework, REST APIs, and the frontend is built with React.js. It uses MySQL to manage the database, VNPay sandbox for payment method, Firebase for image storage, JWT for authentication, DigitalOcean to deploy the backend, and Vercel to deploy the frontend.
+    </li>
+</ul>
+
 
 ![image](https://github.com/user-attachments/assets/19a4baac-fb08-4ca2-8ca6-452980c4e038)
 ![image](https://github.com/user-attachments/assets/37e38f8c-d5b3-40c9-9742-8175a740f4f4)
