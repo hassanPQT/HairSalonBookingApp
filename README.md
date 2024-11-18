@@ -9,7 +9,7 @@
         </ul>
     </li>
     <li>
-        <strong>Technologies:</strong> The application backend is built with Spring Boot framework, REST APIs, and the frontend is built with React.js. It uses MySQL to manage the database, VNPay sandbox for payment method, Firebase for image storage, JWT for authentication, DigitalOcean to deploy the backend, and Vercel to deploy the frontend.
+        <strong>Technologies:</strong> The application backend is built with Spring Boot framework, REST APIs, and the frontend is built with React.js. Use MySQL to manage the database, VNPay sandbox for payment method, Firebase for image storage, JWT for authentication, DigitalOcean to deploy the backend, and Vercel to deploy the frontend.
     </li>
 </ul>
 
