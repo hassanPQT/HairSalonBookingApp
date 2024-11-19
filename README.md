@@ -4,12 +4,12 @@
     <li>
         <strong>Brief:</strong> A web app developed for booking and managing hair salon branches, enabling efficient operations for multiple user roles with main features as follows:
         <ul>
-            <li>Search for services, choose stylist, schedule appointments for booking, update booking, cancel booking, login with Google, auto send mail, payment</li>
+            <li>Search for services, choose stylist, schedule appointments for booking in real time, update booking, cancel booking, login with Google, auto send mail, payment</li>
             <li>Manage salon with CRUD Service, CRUD staff account, CRUD stylist account, CRUD Slot, manage stylist schedule allowing them to choose their working days in the week, manage booking process, etc.</li>
         </ul>
     </li>
     <li>
-        <strong>Technologies:</strong> The application backend is built with Spring Boot framework, REST APIs, and the frontend is built with React.js. Use MySQL to manage the database, VNPay sandbox for payment method, Firebase for image storage, JWT for authentication, DigitalOcean to deploy the backend, and Vercel to deploy the frontend.
+        <strong>Technologies:</strong> The application backend is built with Spring Boot framework, REST APIs, and the frontend is built with React.js. Use MySQL to manage the database, VNPay sandbox for payment method, Firebase for image storage, figma to design UI, JWT for authentication, DigitalOcean to deploy the backend, and Vercel to deploy the frontend.
     </li>
 </ul>
 
